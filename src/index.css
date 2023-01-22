@@ -1,13 +1,265 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
+
+html{ overflow-y: scroll; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  overflow: hidden;
+  background-color: rgb(233, 224, 224);
+}
+
+.websiteBody .table img{
+  border: 1px solid;
+  margin-top: 3px;
+  margin-left: 3px;
+  height: 200px;
+  width: 200px;
+}
+.websiteBody div img {
+  height: 450px;
+  width: 450px;
+}
+.center{
+	width: 190px; 
+	margin: auto;
+}
+
+#rating-value{	
+	width: 110px;
+	text-align: center;
+}
+
+.rating{
+	border: none;
+	float: left;
+}
+
+.rating > input{
+	display: none;
+}
+
+.rating > label:before{
+	content: '\f005';
+	font-family: FontAwesome;
+	margin: 5px;
+	font-size: 1.5rem;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.rating > label{
+	color: white;
+	float: right;
+	cursor: pointer;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label{
+	color: #efe631;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label{
+	color: #efe631;
+}
+input, label, textarea {
+  display: block;
+  color:black;
+  font-style:normal;
+  font-family:Poppins;
+  font-weight:300;
+  font-size:15px;
+}
+#welcome div{
+  position:absolute;
+  pointer-events:none;
+  font-size:20px;
+  margin-top: 300px;
+  margin-left: -45px;
+  text-align:center;
+  color:black;
+  font-style:normal;
+  font-family:Poppins;
+  font-weight:300;
+  text-align: center;
+}
+#table-page{
+  visibility:hidden;
+}
+#history::after #table-page{
+visibility: visible;
+}
+.table-sort {
+  border-spacing: 0;
+  width: 310px;
+  margin-top: 20px;
+}
+tr:first-child{
+  background: white;
+}
+th,td {
+			text-align: center;
+			padding: 15px;
+		}
+    .table-sort, th, td {
+      border-spacing: 2px;
+      border: 1px solid;
+    }
+.Rate-Dog div{
+  position:absolute;
+  pointer-events:none;
+  font-size:25px;
+  margin-top: -30px;
+  margin-left: 15px;
+  text-align:center;
+  color:black;
+  font-style:normal;
+  font-family:Poppins;
+  font-weight:300;
+  text-align: center;
+}
+#Rate-Dog1 {
+  width: 200px;
+  position:absolute;
+  pointer-events:none;
+  font-size:25px;
+  margin-top: 45px;
+  margin-left: 143px;
+  text-align:center;
+  color:black;
+  font-style:normal;
+  font-family:Poppins;
+  font-weight:300;
+  text-align: center;
+}
+#img-principal{
+  margin-top: 65px;
+}
+#submit{
+  text-transform: uppercase;
+  font-weight: 300;
+  background: transparent;
+  width: 9rem;
+  height: 2.25rem;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+  color:black;
+  font-style:normal;
+  font-family:Poppins;
+  font-weight:300;
+  font-size:17px;
+  margin-left: -13px;
+  margin-top: 340px;
+}
+#submit:hover{
+  background-color: #A7AB92;
+  color:white ;
+  border: none;
+  text-decoration: none;
+}
+#submit1{
+  text-transform: uppercase;
+  font-weight: 300;
+  background: transparent;
+  width: 9rem;
+  height: 2.25rem;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+  color:black;
+  font-style:normal;
+  font-family:Poppins;
+  font-weight:300;
+  font-size:17px;
+  margin-left: 150px;
+  margin-top: 10px;
+}
+#submit1:hover{
+  background-color: #A7AB92;
+  color:white ;
+  border: none;
+  text-decoration: none;
+}
+#history{
+  text-transform: uppercase;
+  font-weight: 300;
+  background: transparent;
+  width: 9rem;
+  height: 2.25rem;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+  color:black;
+  font-style:normal;
+  font-family:Poppins;
+  font-weight:300;
+  font-size:15px;
+  margin-left: 150px;
+  margin-top: 10px;
+}
+#history:hover{
+  background-color: #A7AB92;
+  color:white ;
+  border: none;
+  text-decoration: none;
+}
+
+#drop-down{
+  text-transform: uppercase;
+  font-weight: 300;
+  background: transparent;
+  height: 2.25rem;
+  width: 9rem;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+  color:black;
+  font-style:normal;
+  font-family:Poppins;
+  font-weight:300;
+  font-size:15px;
+  margin-left: 85px;
+  margin-top: 10px;
+}
+#sort{
+  text-transform: uppercase;
+  font-weight: 300;
+  background: transparent;
+  min-width: 9rem;
+  max-width: 17rem;
+  height: 2.25rem;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+  color:black;
+  font-style:normal;
+  font-family:Poppins;
+  font-weight:300;
+  font-size:15px;
+  margin-left: 85px;
+  margin-top: 50px;
+}
+#sort:hover{
+  background-color: #A7AB92;
+  color:white ;
+  border: none;
+  text-decoration: none;
+}
+.history-rate {
+  width: 200px;
+  position:absolute;
+  pointer-events:none;
+  font-size:25px;
+  margin-left: 57px;
+  margin-top: 10px;
+  text-align:center;
+  color:black;
+  font-style:normal;
+  font-family:Poppins;
+  font-weight:300;
+  text-align: center;
 }
